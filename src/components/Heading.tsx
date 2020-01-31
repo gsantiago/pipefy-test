@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import theme from '../config/theme'
 
-export default styled.p`
+export default styled.h1`
   display: block;
-  color: ${theme.colors.text};
   font-family: ${theme.fonts.primary};
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: 32px;
+  font-weight: 900;
+  color: ${theme.colors.text};
   margin: 0;
+  padding: 0;
 `
