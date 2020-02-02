@@ -1,5 +1,6 @@
 import React, { HtmlHTMLAttributes } from 'react'
 import styled from 'styled-components'
+import InputBorder, { InputBorderProps } from './InputBorder'
 import theme from '../config/theme'
 
 export default function Input (props: InputProps) {
@@ -11,45 +12,19 @@ export default function Input (props: InputProps) {
   } = props
 
   return (
-    <Container state={state}>
-      {left && (
-        <AddOn style={{ paddingLeft: 10 }}>
-          {left}
-        </AddOn>
-      )}
+    <InputBorder
+      left={left}
+      right={right}
+      state={state}
+    >
       <InputEl {...rest} />
-      {right && (
-        <AddOn style={{ paddingRight: 10 }}>
-          {right}
-        </AddOn>
-      )}
-    </Container>
+    </InputBorder>
   )
 }
 
-const stateColors = {
-  none: theme.colors.control,
-  focused: theme.colors.primary,
-  valid: theme.colors.success,
-  invalid: theme.colors.error
-}
-
-export type InputState = keyof typeof stateColors
-
-export interface InputProps extends HtmlHTMLAttributes<HTMLInputElement> {
-  left?: React.ReactChild
-  right?: React.ReactChild
-  as?: 'input' | 'textarea'
-  state?: InputState
-}
-
-const Container = styled.div<{ state?: InputState }>`
-  display: flex;
-  width: 100%;
-  background-color: #fff;
-  border: 1px solid ${props => stateColors[props.state || 'none']};
-  border-radius: 3px;
-`
+export interface InputProps
+  extends Omit<InputBorderProps, 'children'>,
+          HtmlHTMLAttributes<HTMLInputElement> {}
 
 const InputEl = styled.input`
   display: block;
@@ -66,11 +41,4 @@ const InputEl = styled.input`
     cursor: not-allowed;
     background-color: rgba(0, 0, 0, 0.1);
   }
-`
-
-const AddOn = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
 `
