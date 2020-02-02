@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { SyntheticEvent } from 'react'
 import styled from 'styled-components'
 import Icon from './Icon'
 import theme from '../config/theme'
@@ -7,13 +7,15 @@ export default function Button (props: ButtonProps) {
   const {
     title,
     submitting,
-    disabled
+    disabled,
+    onClick
   } = props
 
   return (
     <Container
       title={title}
       disabled={submitting || disabled}
+      onClick={onClick}
     >
       {submitting ? (
         <Icon
@@ -30,6 +32,7 @@ export interface ButtonProps {
   title: string
   submitting?: boolean
   disabled?: boolean
+  onClick?(e: SyntheticEvent): void
 }
 
 const Container = styled.button`
@@ -44,6 +47,7 @@ const Container = styled.button`
   background-color: ${theme.colors.primary};
   border: none;
   border-radius: 100px;
+  cursor: pointer;
 
   &[disabled] {
     cursor: not-allowed;

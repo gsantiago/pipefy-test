@@ -1,4 +1,5 @@
 import React from 'react'
+import { action } from '@storybook/addon-actions'
 import Button from '../components/Button'
 
 export default {
@@ -9,6 +10,7 @@ export default {
 export const Normal = () =>
   <Button
     title='Submit Button'
+    onClick={action('clicked')}
   />
 
 export const Disabled = () =>
