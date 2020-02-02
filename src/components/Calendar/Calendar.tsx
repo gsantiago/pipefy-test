@@ -25,7 +25,7 @@ export default function Calendar (props: CalendarProps) {
     if (value && !dateFns.isSameMonth(displayDate, value)) {
       setDisplayDate(value)
     }
-  }, [value])
+  }, [value, displayDate])
 
   const days = useMemo(
     () => (generateDays(displayDate)),
@@ -88,7 +88,7 @@ export default function Calendar (props: CalendarProps) {
 }
 
 export interface CalendarProps {
-  value?: Date
+  value?: Date | null
   onChange(value: Date): void
 }
 

@@ -24,7 +24,9 @@ export default function Input (props: InputProps) {
 
 export interface InputProps
   extends Omit<InputBorderProps, 'children'>,
-          HtmlHTMLAttributes<HTMLInputElement> {}
+          HtmlHTMLAttributes<HTMLInputElement> {
+  value?: string
+}
 
 const InputEl = styled.input`
   display: block;
