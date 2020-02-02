@@ -5,7 +5,8 @@ export default {
     error: '#F79682',
     text: '#4D6788',
     control: '#C0D0E6',
-    icon: '#7F8B97'
+    icon: '#7F8B97',
+    background: '#ECF1F8'
   },
   fonts: {
     primary: `'Nunito Sans', sans-serif`
