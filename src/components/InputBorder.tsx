@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import styled from 'styled-components'
 import theme from '../config/theme'
 
@@ -6,6 +6,8 @@ export default function InputBorder (props: InputBorderProps) {
   const {
     left,
     right,
+    leftStyle,
+    rightStyle,
     state,
     children
   } = props
@@ -13,13 +15,13 @@ export default function InputBorder (props: InputBorderProps) {
   return (
     <Container state={state}>
       {left && (
-        <AddOn style={{ paddingLeft: 10 }}>
+        <AddOn style={{ paddingLeft: 10, ...leftStyle }}>
           {left}
         </AddOn>
       )}
       {children}
       {right && (
-        <AddOn style={{ paddingRight: 10 }}>
+        <AddOn style={{ paddingRight: 10, ...rightStyle }}>
           {right}
         </AddOn>
       )}
@@ -32,6 +34,8 @@ export interface InputBorderProps {
   right?: React.ReactChild
   state?: InputState
   children: React.ReactChild
+  leftStyle?: CSSProperties
+  rightStyle?: CSSProperties
 }
 
 const stateColors = {
@@ -49,6 +53,7 @@ const Container = styled.div<{ state?: InputState }>`
   background-color: #fff;
   border: 1px solid ${props => stateColors[props.state || 'none']};
   border-radius: 3px;
+  position: relative;
 `
 
 const AddOn = styled.div`
