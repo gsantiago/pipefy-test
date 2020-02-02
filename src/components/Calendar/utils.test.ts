@@ -1,5 +1,5 @@
-import {eachDayOfInterval, isSameMonth, isToday} from 'date-fns'
-import { generateDays } from './Calendar'
+import { eachDayOfInterval, isSameMonth, isToday } from 'date-fns'
+import { generateDays } from './utils'
 
 const createDate = (year: number, month: number, day: number) =>
   new Date(year, month, day, 0, 0, 0, 0)

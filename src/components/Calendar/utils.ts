@@ -1,24 +1,5 @@
-import React from 'react'
-import * as dateFns from 'date-fns'
-
-export default function Calendar (props: CalendarProps) {
-  return (
-    <div>
-      calendar
-    </div>
-  )
-}
-
-export interface CalendarProps {
-  value?: Date
-  onChange(value: Date): Date
-}
-
-export interface Day {
-  date: Date
-  isAdjacentMonth: boolean
-  isToday: boolean
-}
+import * as dateFns from "date-fns"
+import { Day } from './Calendar'
 
 export const generateDays = (displayDate: Date): Day[] => {
   const selectedDate = dateFns.setDate(displayDate, 1)
