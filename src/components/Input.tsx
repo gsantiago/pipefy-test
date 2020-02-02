@@ -60,6 +60,12 @@ const InputEl = styled.input`
   font-family: ${theme.fonts.primary};
   font-size: 16px;
   padding: 8px;
+  background-color: transparent;
+
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 `
 
 const AddOn = styled.div`

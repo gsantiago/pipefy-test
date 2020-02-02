@@ -52,3 +52,8 @@ export const Invalid = () =>
     defaultValue='This input is invalid'
     state='invalid'
   />
+
+export const DisabledInput = () =>
+  <Input
+    disabled
+  />
