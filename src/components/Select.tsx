@@ -1,4 +1,4 @@
-import React, { useRef, HtmlHTMLAttributes } from 'react'
+import React, { HtmlHTMLAttributes } from 'react'
 import styled from 'styled-components'
 import InputBorder, { InputBorderProps } from './InputBorder'
 import Icon from './Icon'
@@ -10,8 +10,6 @@ export default function Select (props: SelectProps) {
     options,
     ...rest
   } = props
-
-  const selectRef = useRef<HTMLSelectElement>(null)
 
   return (
     <InputBorder
@@ -29,7 +27,10 @@ export default function Select (props: SelectProps) {
       }}
       state={state}
     >
-      <SelectEl {...rest}>
+      <SelectEl
+        data-testid='select'
+        {...rest}
+      >
         <option value='' />
         {options.map((option, index) => (
           <option

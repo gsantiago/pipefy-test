@@ -1,4 +1,5 @@
 import React from 'react'
+import { action } from '@storybook/addon-actions'
 import Select from '../components/Select'
 
 export default {
@@ -8,6 +9,7 @@ export default {
 
 export const Normal = () =>
   <Select
+    onChange={action('changed')}
     options={[
       { label: 'Option 1', value: '1' },
       { label: 'Option 2', value: '2' },
@@ -17,6 +19,7 @@ export const Normal = () =>
 
 export const WithSelectedValue = () =>
   <Select
+    onChange={action('changed')}
     value='2'
     options={[
       { label: 'Option 1', value: '1' },
