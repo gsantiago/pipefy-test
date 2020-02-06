@@ -7,10 +7,10 @@ export interface OptionType {
 // but I will manually define the interface here
 export interface PublicForm {
   publicForm: {
-    __typename: 'PublicForm'
+    __typename?: 'PublicForm'
     formFields: FormField[]
     publicFormSettings: {
-      __typename: 'PublicFormSettings'
+      __typename?: 'PublicFormSettings'
       organizationName: string
       submitButtonText: string
       title: string
@@ -26,7 +26,7 @@ export type FormFieldType = 'ShortTextField' |
   'DateField'
 
 export interface FormField {
-  __typename: FormFieldType
+  __typename?: FormFieldType
   id: string
   label: string
   options?: string[]
