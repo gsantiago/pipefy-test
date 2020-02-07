@@ -42,3 +42,18 @@ export const FETCH_FORM_DATA = gql`
     }
   }
 `
+
+export const SUBMIT_FORM_DATA = gql`
+  mutation submit ($filledFields: [FilledField]!) {
+    submitPublicForm(input: {
+      formId: "1lf_E0x4",
+        filledFields: $filledFields,
+        publicFormSubmitterEmail: "teste@email.com"
+      }) {
+      repoItem {
+        id
+        title
+      }
+    }
+  }
+`
