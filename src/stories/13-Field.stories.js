@@ -56,13 +56,13 @@ export const SelectField = () =>
     )}
   </Form>
 
-export const RadioVerticalList = () =>
+export const RadioVerticalField = () =>
   <Form onSubmit={console.log}>
     {() => (
       <Field
         id='select'
         label='Pick an option'
-        type='RadioVerticalList'
+        type='RadioVerticalField'
         options={[
           'Option A',
           'Option B',
@@ -72,13 +72,13 @@ export const RadioVerticalList = () =>
     )}
   </Form>
 
-export const CheckListVerticalField = () =>
+export const ChecklistVerticalField = () =>
   <Form onSubmit={console.log}>
     {() => (
       <Field
         id='select'
         label='Check options'
-        type='CheckListVerticalField'
+        type='ChecklistVerticalField'
         options={[
           'Option A',
           'Option B',

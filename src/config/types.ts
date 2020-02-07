@@ -21,8 +21,8 @@ export interface PublicForm {
 export type FormFieldType = 'ShortTextField' |
   'LongTextField' |
   'SelectField' |
-  'RadioVerticalList' |
-  'CheckListVerticalField' |
+  'RadioVerticalField' |
+  'ChecklistVerticalField' |
   'DateField'
 
 export interface FormField {

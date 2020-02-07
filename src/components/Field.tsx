@@ -48,14 +48,14 @@ const formFields: { [ key in FormFieldType ]: React.FC<any> } = {
   DateField: InputDatePicker,
   SelectField: ({ options, ...props }) =>
     <Select {...props} options={mapOptions(options)} />,
-  CheckListVerticalField: ({ options, value, ...props }) =>
+  ChecklistVerticalField: ({ options, value, ...props }) =>
     <OptionList
       {...props}
       type='checkbox'
       options={mapOptions(options)}
       value={value || []}
     />,
-  RadioVerticalList: ({ options, value, ...props }) =>
+  RadioVerticalField: ({ options, value, ...props }) =>
     <OptionList
       {...props}
       type='radio'

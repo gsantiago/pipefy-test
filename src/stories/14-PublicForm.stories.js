@@ -52,13 +52,13 @@ export const WithManyFields = () =>
           options: ['Youtube', 'Facebook', 'Other']
         },
         {
-          __typename: 'RadioVerticalList',
+          __typename: 'RadioVerticalField',
           id: 'region',
           label: 'Your region',
           options: ['North', 'South', 'West', 'Lest']
         },
         {
-          __typename: 'CheckListVerticalField',
+          __typename: 'ChecklistVerticalField',
           id: 'skills',
           label: 'Your skills',
           options: ['HTML', 'CSS', 'JS', 'PHP', 'Java', 'C++']
