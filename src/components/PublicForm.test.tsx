@@ -1,6 +1,5 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import PublicFom from './PublicFom'
 import PublicForm from './PublicForm'
 
 it('renders without crashing', () => {
