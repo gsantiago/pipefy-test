@@ -35,7 +35,7 @@ export interface ButtonProps {
   onClick?(e: SyntheticEvent): void
 }
 
-const Container = styled.button`
+const Container = styled.button.attrs({ type: 'submit' })`
   display: block;
   padding: 15px 30px;
   font-family: ${theme.fonts.primary};

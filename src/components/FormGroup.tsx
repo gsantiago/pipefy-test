@@ -44,9 +44,7 @@ export interface FormGroupProps {
 }
 
 const Container = styled.div`
-  & + & {
-    margin-top: 20px;
-  }
+  margin-bottom: 20px;
 `
 
 const Content = styled.div`
