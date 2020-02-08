@@ -58,7 +58,7 @@ const SelectEl = styled.select`
   appearance: none;
   background-color: transparent;
   border: none;
-  height: 40px;
+  height: 38px;
   padding: 0 10px;
   font-family: ${theme.fonts.primary};
   font-size: 16px;
