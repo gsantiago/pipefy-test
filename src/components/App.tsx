@@ -21,8 +21,6 @@ export default function App () {
             .keys(data)
             .map(key => ({ fieldId: key, fieldValue: data[key] }))
 
-          console.log(filledFields)
-
           try {
             await submit({
               variables: { filledFields }
