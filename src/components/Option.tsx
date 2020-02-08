@@ -41,7 +41,7 @@ export interface OptionProps {
   onChange(newValue: boolean): void
 }
 
-const Container = styled.button`
+const Container = styled.button.attrs({ type: 'button' })`
   display: flex;
   align-items: center;
   background-color: transparent;
