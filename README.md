@@ -1,6 +1,6 @@
 # front-end test for pipefy
 
-**[CHECK OUT ONLINE (HEROKU)](https://guilherme-na-pipefy.herokuapp.com/)**
+**[ONLINE VERSION (HEROKU)](https://guilherme-na-pipefy.herokuapp.com/)**
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and
 has the following stack:
@@ -29,12 +29,12 @@ Semicolons (`;`) are like wisdom teeth or the appendix for the JavaScript: it's 
 
 Because of that and other reasons, I followed the [JavaScript Standard Style](https://standardjs.com/).
 
-    NOTE: I only use this particular code style for my own projects. If a company's project has a different code style, I respect and follow the project's code style because I believe that the project and the team is above my personal preferences.
+> NOTE: I only use this particular code style for my own projects. If a company's project has a different code style, I respect and follow the project's code style because I believe that the project and the team is above my personal preferences.
 
 Here's a code sample, without dirties like semicolons and trailing commas:
 
 <p align="center">
-  <img src="./preview.png" />
+  <img src="./code-sample.png" />
 </p>
 
 ## about the InputDatePicker
