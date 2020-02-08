@@ -6,7 +6,7 @@ import { PublicForm as PublicFormI } from '../config/types'
 
 export default function App () {
   const query = useQuery<PublicFormI>(FETCH_FORM_DATA)
-  const [ submit, { data } ] = useMutation(SUBMIT_FORM_DATA)
+  const [ submit ] = useMutation(SUBMIT_FORM_DATA)
 
   if (query.loading) return <div>Loading</div>
 
@@ -16,11 +16,24 @@ export default function App () {
     return (
       <PublicForm
         publicForm={query.data.publicForm}
-        onSubmit={(data) => submit({
-          variables: {
-            filledFields: Object.keys(data).map(key => ({ fieldId: key, fieldValue: data[key] }))
+        onSubmit={async (data, form) => {
+          const filledFields = Object
+            .keys(data)
+            .map(key => ({ fieldId: key, fieldValue: data[key] }))
+
+          console.log(filledFields)
+
+          try {
+            await submit({
+              variables: { filledFields }
+            })
+
+            alert('Form successfully submitted')
+            setTimeout(form.reset)
+          } catch (err) {
+            alert(err.message)
           }
-        })}
+        }}
       />
     )
   }
