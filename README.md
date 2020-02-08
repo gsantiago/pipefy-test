@@ -21,7 +21,7 @@ has the following stack:
 
 ## about the style
 
-- The style are simple because I focused more on the JavaScript (TypeScript, actually) code and the integration with Apollo/GraphQL
+The style are simple because I focused more on the JavaScript (TypeScript, actually) code and the integration with Apollo/GraphQL.
 
 ## about the code style
 
@@ -31,7 +31,7 @@ Because of that and other reasons, I followed the [JavaScript Standard Style](ht
 
 > NOTE: I only use this particular code style for my own projects. If a company's project has a different code style, I respect and follow the project's code style because I believe that the project and the team is above my personal preferences.
 
-Here's a code sample, without dirties like semicolons and trailing commas:
+Here's a code sample, without dirt like semicolons and trailing commas:
 
 <p align="center">
   <img src="./code-sample.png" />
@@ -39,9 +39,9 @@ Here's a code sample, without dirties like semicolons and trailing commas:
 
 ## about the InputDatePicker
 
-I built a InputDatePicker from scratch for this project. It's simple, but I don't
+I built an InputDatePicker from scratch for this project. It's simple, but I don't
 depends on any third-party modules besides React itself, Styled Components for styling and the tiny and awesome [date-fns](https://date-fns.org/) for handling Date operations.
 
 <p align="center">
-  <img src="./input-date-picker.png" />
+  <img src="./input-date-picker.png" style="width: 600px" />
 </p>
