@@ -25,13 +25,10 @@ The style are simple because I focused more on the JavaScript (TypeScript, actua
 
 ## code style
 
-Semicolons (`;`) are like wisdom teeth or the appendix for the JavaScript: it's (almost) completely useless, an evolutionary vestige that the language inherited from primitives languages like C.
+I followed the [JavaScript Standard Style](https://standardjs.com/), my favorite code style, whose main features
+are the absence of semicolons and trailing commas.
 
-Because of that and other reasons, I followed the [JavaScript Standard Style](https://standardjs.com/).
-
-> NOTE: I only use this particular code style for my own projects. If a company's project has a different code style, I respect and follow the project's code style because I believe that the project and the team is above my personal preferences.
-
-Here's a code sample, without dirt like semicolons and trailing commas:
+Here's a example:
 
 <p align="center">
   <img src="./code-sample.png" />
