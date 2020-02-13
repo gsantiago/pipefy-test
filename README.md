@@ -36,7 +36,7 @@ Here's a example:
 
 ## the InputDatePicker
 
-I built an InputDatePicker from scratch for this project. It's simple, but I don't
+I built an InputDatePicker from scratch for this project. It's simple, but it doesn't
 depends on any third-party modules besides React itself, Styled Components for styling and the tiny and awesome [date-fns](https://date-fns.org/) for handling Date operations.
 
 <p align="center">
